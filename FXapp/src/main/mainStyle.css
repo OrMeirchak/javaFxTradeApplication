@@ -1,0 +1,19 @@
+#loadFileLabel {
+    -fx-text-fill: blue;
+    -fx-border-width: 4px;
+}
+#loadFileStatusLabel {
+    -fx-text-fill: Turquoise;
+    -fx-border-width: 4px;
+}
+.titled-pane
+{
+    -fx-text-fill: white;
+}
+.titled-pane > .title
+{
+    -fx-background-color: -fx-box-border, -fx-inner-border, DarkOliveGreen;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;
+    -fx-padding: 0.166667em 0.833333em 0.25em 0.833333em;
+}

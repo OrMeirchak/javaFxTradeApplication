@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.displayStock.displayStockController">
+    <children>
+        <SplitMenuButton fx:id="selectStockSplitMenuButton" layoutX="30.0" layoutY="25.0" mnemonicParsing="false" onAction="#selectStockSplitMenuButtonOnAction" text="Select stock" />
+        <TabPane layoutX="30.0" layoutY="70.0" prefHeight="321.0" prefWidth="541.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="saleOrdersTab" text="Sale Orders">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        <fx:include fx:id="saleOrdersComponent" source="saleOrdersTable/ordersTable.fxml">
+                        </fx:include>
+                    </content>
+                </Tab>
+                <Tab fx:id="buyOrdersTab" text="Buy orders">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        <fx:include fx:id="buyOrdersComponent" source="buyOrdersTable/ordersTable.fxml">
+                        </fx:include>
+                    </content>
+                </Tab>
+                <Tab fx:id="dealsTab" text="Deals">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        <fx:include fx:id="dealsTableComponent" source="dealsTable/dealsTable.fxml">
+                        </fx:include>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

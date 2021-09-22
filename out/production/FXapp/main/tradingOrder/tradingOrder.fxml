@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="MainComponent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@tradingOrderStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.tradingOrder.TradingOrderController">
+   <children>
+      <HBox fx:id="upperComponent" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="sellOrdinanceRadioButton" mnemonicParsing="false" onAction="#sellOrdinanceRadioButtonOnAction" text="I want to sell">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="buyOrdinanceRadioButton" mnemonicParsing="false" onAction="#buyOrdinanceRadioButtonOnAction" text="I want to buy">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </RadioButton>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <SplitMenuButton fx:id="selectStockButton" mnemonicParsing="false" onAction="#selectStockButtonOnAction" text="Select stock">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </SplitMenuButton>
+      <HBox fx:id="ordinanceTypeComponent" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="MTKRadioButton" mnemonicParsing="false" onAction="#MTKRadioButtonOnAction" text="MTK" />
+            <RadioButton fx:id="LMTRadioButton" mnemonicParsing="false" onAction="#LMTRadioButtonOnAction" text="LMT">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </RadioButton>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="limitLabel" text="Limit:">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="limitTextField" onAction="#limitTextFieldOnAction" prefHeight="31.0" prefWidth="188.0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox fx:id="amountComponent" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="amountLabel" text="Amount:">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="amountTextField" onAction="#amountTextFieldOnAction" onKeyPressed="#amountTextChanged" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <Button fx:id="doneButton" mnemonicParsing="false" onAction="#doneButtonOnAction" text="Done">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>
